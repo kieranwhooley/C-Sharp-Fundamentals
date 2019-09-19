@@ -14,29 +14,29 @@ namespace First_CSharp_Project
             int numberOfStudents = int.Parse(Console.ReadLine());
 
             string[] studentNames = new string[numberOfStudents];
-            int[] studentGrades = new int[numberOfStudents];
+            double[] studentGrades = new double[numberOfStudents];
 
             for(int i = 0; i < numberOfStudents; i++)
             {
                 Console.WriteLine("Enter name of student {0}: ", i + 1);
                 studentNames[i] = Console.ReadLine();
                 Console.WriteLine("Enter grade of student {0}: ", i + 1);
-                studentGrades[i] = int.Parse(Console.ReadLine());
+                studentGrades[i] = double.Parse(Console.ReadLine());
             }
 
-            int[] sortedGrades = new int[numberOfStudents];
+            double[] sortedGrades = new double[numberOfStudents];
             studentGrades.CopyTo(sortedGrades, 0);
             Array.Sort(sortedGrades);
             Array.Reverse(sortedGrades);
 
-            int highestGrade = sortedGrades[0];
+            double highestGrade = sortedGrades[0];
             Console.WriteLine("The highest grade was {0}", highestGrade);
             int indexOfHighest = Array.IndexOf(studentGrades, highestGrade);
             Console.WriteLine("This was achieved by {0}", studentNames[indexOfHighest]);
 
             double total = 0;
             double average = 0;
-            foreach (int grade in studentGrades)
+            foreach (double grade in studentGrades)
             {
                 total += grade;
                 average = total / numberOfStudents;
