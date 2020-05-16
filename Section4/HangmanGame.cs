@@ -17,10 +17,20 @@ namespace HangmanGame
             Random rand = new Random();
             int chosenWordPostion = rand.Next(7);
             string chosenRandomWord = wordList[chosenWordPostion];
-            
+
             //Console.WriteLine(chosenRandomWord);
-            Console.WriteLine("Welcome to the guessing game!");
-           
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("*******************");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Welcome to Hangman!");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("*******************");
+            Console.ResetColor();
+            Console.WriteLine("");
+            Console.WriteLine("(You can have up to 5 incorrect guesses)");
+
             //split that word into an array of characters
             char[] individualLetters = chosenRandomWord.ToCharArray();
             
@@ -40,7 +50,7 @@ namespace HangmanGame
             //keep looping until the word is found or the guesses run out
             while (keepGuessing && numberOfGuesses < 6)
             {
-                Console.WriteLine("Number of letters in word: {0}", lengthOfRandomWord);
+                Console.WriteLine("Number of letters in the hidden word: {0}", lengthOfRandomWord);
                 
                 //print out the * array
                 //if a letter is guessed correctly it will be printed in the array on the next iteration
@@ -51,7 +61,7 @@ namespace HangmanGame
                 Console.WriteLine();
 
                 //enter a guess
-                Console.WriteLine("Please enter a guess for the hidden letters:");
+                Console.WriteLine("Please enter a guess for a letter in the hidden word:");
                 string userGuess = Console.ReadLine();
                 bool validInput = char.TryParse(userGuess, out char guessedLetter);
 
