@@ -75,6 +75,7 @@ namespace HangmanGame
                             {
                                 keepGuessing = false;
                                 Console.Clear();
+                                Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("Correct! The word was {0}!", chosenRandomWord);
                                 Console.Read();
                             }
@@ -91,6 +92,7 @@ namespace HangmanGame
                         if (numberOfGuesses > 5)
                         {
                             Console.Clear();
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("You have run out of guesses! The word was '{0}'!", chosenRandomWord);
                             Console.Read();
                         }
