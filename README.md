@@ -11,3 +11,7 @@ Here is a link to the course:
 [Visual Studio](https://visualstudio.microsoft.com/)
 
 [C# Guide](https://docs.microsoft.com/en-us/dotnet/csharp/)
+
+# Certificate of Completion
+
+![Certificate](/Images/Udemy_CSharp_Fundamentals_Cert.jpg)
